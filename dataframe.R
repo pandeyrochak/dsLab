@@ -45,5 +45,12 @@ print(tapply(iris$Petal.Width,iris$Species, mean))
 val<-sapply(numeric_cols,mean)
 write.csv2(val,"./Documents/ds_wd/file.csv",row.names = TRUE)
 
-
 #---q22
+install.packages("reshape2")
+library(reshape2)
+
+iris
+melted.iris<-melt(df, id.vars = "Species")
+melted.iris
+casted.iris<-cast(melted.iris)
+casted.iris  

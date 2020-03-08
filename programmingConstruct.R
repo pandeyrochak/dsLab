@@ -20,6 +20,23 @@ myList<-list(100,34,534,987,1,8)
 print(getMax(myList))
 
 #---q6---
+ls<-list(10:20)
+ls1<-unlist(ls)
+ls1_length<-length(ls1)
+runningTotal<-integer(ls1_length)
+runningTotal[1]<-ls1[1]
+for(i in 2:ls1_length){
+  runningTotal[i]<-runningTotal[i-1] + ls1[i]
+}
+
+for(i in 0:ls1_length){
+  if(i==0){
+    cat("List", "Running Total\n", sep = "  ")
+    } 
+  else{
+    cat(ls1[i], runningTotal[i],"\n",sep = "     ")  
+  } 
+}
 
 
 
